@@ -67,7 +67,7 @@ async function success(position) {
 
   getLocationName(latitude, longitude)
 
-  queryLink.value = `http://environment.data.gov.uk/flood-monitoring/id/stations?lat=${latitude}&long=${longitude}&dist=5&parameter=level`;
+  queryLink.value = `https://environment.data.gov.uk/flood-monitoring/id/stations?lat=${latitude}&long=${longitude}&dist=5&parameter=level`;
   queryCoOrds.value = `latitude: ${latitude} °, longitude: ${longitude} °`;
   data.value = await useFetch(queryLink)
   loadingState.value = false
