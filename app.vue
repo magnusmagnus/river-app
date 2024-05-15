@@ -2,11 +2,14 @@
   <div class="container min-h-screen mx-auto flex flex-col justify-between pt-">
     <div>
       <header class="px-2 py-3">
-        <h1 class="text-4xl  py-3">Local River Monitoring Stations</h1>
-        <div v-if="!permissionDenied" class="flex items-center">
-          <p>Showing river data for
+        <h1 class="text-4xl font-bold py-3">Local River Monitoring Stations</h1>
+        <div v-if="!permissionDenied" class="flex items-center text-2xl">
+          <p>
+            Showing river data for
+            <span class="font-bold">
+              {{ locationName }}
+            </span>
           </p>
-          <p class="font-bold ml-1 text-3xl px-2 py-1 border-4 border-slate-200 rounded">{{ locationName }}</p>
         </div>
 
       </header>
@@ -38,7 +41,7 @@
     </div>
     <div>
     </div>
-    <footer class="px-2 py-6">
+    <footer class="px-2 py-6 space-y-4">
       <p v-if="queryCoOrds">Using your browser defined location at {{ queryCoOrds }}</p>
       <p>
         This app uses Environment Agency flood and river level data from the
