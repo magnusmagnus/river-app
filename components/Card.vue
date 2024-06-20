@@ -56,8 +56,6 @@ const { river } = toRefs(props);
 
 const riverUrl = river.value.replace('http://', 'https://')
 
-console.log(riverUrl)
-
 const fetchRiverData = async () => {
 
     const { data } = await useFetch(riverUrl)
