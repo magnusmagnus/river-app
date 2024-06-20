@@ -54,7 +54,9 @@
 const props = defineProps(['river', 'loadingState'])
 const { river } = toRefs(props);
 
-const riverUrl = river
+const riverUrl = river.value.replace('http://', 'https://')
+
+console.log(riverUrl)
 
 const fetchRiverData = async () => {
 
